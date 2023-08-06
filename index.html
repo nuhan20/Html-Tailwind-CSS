@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/heroicons.min.css" rel="stylesheet">
+    <title>Form</title>
+</head>
+<body class="p-4">
+        <!--Form Start-->
+    <form>
+         <!--Fieldset 1 -->
+        <fieldset class="border p-4">
+           
+            <div class="flex">
+                <div class="p-4 w-1/2">
+                    <label for="name" class="block font-bold mb-1">Name</label>
+                    <input type="text" id="name" name="name" class="w-full border rounded px-2 py-1">
+        
+                    <label for="description" class="block font-bold mb-1 mt-2">Description</label>
+                    <textarea id="description" name="description" rows="3" class="w-full border rounded px-2 py-1"></textarea>
+                </div>
+                <div class="mb-4 p-4 w-1/2">
+                    <label for="type" class="block font-bold mb-1">Type</label>
+                    <select id="type" name="type" class="w-full border rounded px-2 py-1">
+                        <option value="option1">Measure</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+        
+                    <label for="weight" class="block font-bold mb-1 mt-2">Weight</label>
+                    <input type="text" id="weight" name="weight" class="w-full border rounded px-2 py-1">
+        
+                    <button type="submit" class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-1 px-2 rounded mt-4 border w-full">
+                    Advance Options
+                    </button>
+                </div>
+            </div>
+        </fieldset>
+        <br>
+         <!--Fieldset 2 -->
+        <fieldset class="border p-4">
+            <legend class="font-bold mb-2">MEASURE DETAILS</legend>
+            <div class="flex">
+                <div class="p-4 w-1/3">
+                    <label for="scoringtype" class="block font-bold mb-1">Scoring Type</label>
+                    <select id="type" name="type" class="w-full border rounded px-2 py-1">
+                        <option value="option1">Goal/Red Flag</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    
+                    <label for="scoringtype" class="block font-bold mb-1">Manual Aggregation Type</label>
+                    <select id="type" name="type" class="w-full border rounded px-2 py-1">
+                        <option value="option1">Sum</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+
+                    <label for="unit" class="block font-bold mb-1">Units</label>
+                    <select id="unit" name="unit" class="w-full border rounded px-2 py-1">
+                        <option value="option1"></option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="mb-4 p-4 w-1/3">
+                    <label for="calender" class="block font-bold mb-1">Calendar</label>
+                    <select id="calender" name="calender" class="w-full border rounded px-2 py-1">
+                        <option value="option1">Monthly</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+
+                    <label for="type" class="block font-bold mb-1">Calculated Aggregation Type</label>
+                    <select id="type" name="type" class="w-full border rounded px-2 py-1">
+                        <option value="option1">Sum (Recommended)</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="mb-4 p-4 w-1/3">
+                    <label for="type" class="block font-bold mb-1">Data Type</label>
+                    <select id="type" name="type" class="w-full border rounded px-2 py-1">
+                        <option value="option1"># Number</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+
+                    <label for="type" class="block font-bold mb-1">Decimal Precision</label>
+                    <select id="type" name="type" class="w-full border rounded px-2 py-1">
+                        <option value="option1">Default Decimal Precision</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+            </div>
+        </fieldset><br>
+        <!--Fieldset 3 -->
+        <fieldset class="border p-4">
+            <legend class="font-bold mb-2">FIELDS</legend>
+            <div class="flex">
+                <div class="p-4 w-1/3">
+                    <label for="scoringtype" class="block font-bold mb-1">Measure Value</label>
+                    <select id="type" name="type" class="w-full border rounded px-2 py-1">
+                        <option value="option1">Calculated</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="mb-4 p-4 w-1/3">
+                    <label for="type" class="block font-bold mb-1">Red Flag</label>
+                    <select id="type" name="type" class="w-full border rounded px-2 py-1">
+                        <option value="option1">Manual</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <div class="mb-4 p-4 w-1/3">
+                    <label for="type" class="block font-bold mb-1">Goal</label>
+                    <select id="type" name="type" class="w-full border rounded px-2 py-1">
+                        <option value="option1">Manual</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+        </fieldset>
+    </form>
+     <!--Bottom-->
+    <div>
+        <div class="bg-white p-4 rounded shadow-md">
+
+            <div class="flex justify-between">
+                <div class="space-x-2">
+                    <button class="px-4 py-2 text-sm text-gray-600 bg-gray-300 hover:bg-gray-400 rounded">
+                        <svg class="w-4 h-4 inline-block align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Move
+                    </button>
+                    <button class="px-4 py-2 text-sm text-white bg-indigo-500 hover:bg-indigo-600 rounded">
+                        <svg class="w-4 h-4 inline-block align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Copy
+                    </button>
+                    <button class="px-4 py-2 text-sm text-white bg-red-500 hover:bg-red-600 rounded">
+                        <svg class="w-4 h-4 inline-block align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                        Delete
+                    </button>
+                </div>
+                <div class="space-x-2">
+                    <button class="px-4 py-2 text-sm text-gray-600 bg-gray-300 hover:bg-gray-400 rounded">
+                        <svg class="w-4 h-4 inline-block align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                        Cancel
+                    </button>
+                    <button class="px-4 py-2 text-sm text-white bg-indigo-500 hover:bg-indigo-600 rounded">
+                        <svg class="w-4 h-4 inline-block align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
