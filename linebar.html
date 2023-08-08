@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+<div class="w-full max-w-md bg-white rounded-lg shadow p-6">
+    <canvas id="myChart" class="w-full"></canvas>
+</div>
+
+<script>
+    var xValues = ["Product1", "Product2"];
+    var yValues = [50, 50];
+    var barColors = ["lightgreen", "blue"]; // Changed bar colors
+
+    // Custom plugin to draw arrows on the bars
+    Chart.plugins.register({
+        afterDraw: function(chart, easing) {
+            var ctx = chart.ctx;
+            var xAxis = chart.scales['x'];
+            var yAxis = chart.scales['y'];
+            var dataset = chart.data.datasets[45,40];
+
+            ctx.save();
+
+            for (var i = 0; i < dataset.data.length; i++) {
+                var value = dataset.data[i];
+                var x = xAxis.getPixelForValue(value) - 6; // Adjust arrow position
+                var y = yAxis.getPixelForTick(i) + yAxis.options.gridLineWidth / 2;
+
+                ctx.fillStyle = dataset.backgroundColor[i];
+                ctx.beginPath();
+                ctx.moveTo(x, y - 4);
+                ctx.lineTo(x + 8, y);
+                ctx.lineTo(x, y + 4);
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            ctx.restore();
+        }
+    });
+
+    new Chart("myChart", {
+        type: "horizontalBar",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            plugins: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "Horizontal Bar Chart with Arrows",
+                    font: {
+                        weight: 'bold'
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: 60,
+                    title: {
+                        display: true,
+                        text: 'Value',
+                        font: {
+                            weight: 'bold'
+                        }
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Product',
+                        font: {
+                            weight: 'bold'
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
